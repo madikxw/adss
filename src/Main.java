@@ -1,13 +1,74 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+// the 1 task
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+import java.util.Scanner;
+//public class Main{
+//    public static  void separate(int n){
+//        if(n ==0){
+//            return;
+//        }
+//        separate(n/10);
+//        System.out.println(n%10);
+//    }
+//    public static void main(String[] args){
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Enter your number ");
+//        int a = scanner.nextInt();
+//        separate(a);
+//
+//    }
+//
+//}
+
+
+// the 2 task
+
+
+//public class Main{
+//     static  Scanner scanner = new Scanner(System.in);
+//
+//    public static void  main(String[] args){
+//        System.out.println("enter amount elements: ");
+//        int b = scanner.nextInt();
+//        System.out.println("enter elements: ");
+//        int sum = average(b);
+//        System.out.println((double)sum/b);
+//
+//    }
+//    public static  int  average(int b) {
+//        if(b ==0){
+//            return 0;
+//        }
+//        int a = scanner.nextInt();
+//        return a + average(b-1);
+//}
+//    }
+
+
+//the 3 task
+public class Main{
+    static Scanner scanner = new Scanner(System.in);
+    public static boolean iSprime(int a, int i  ){
+        if(a % i == 0){
+            return  false;
+        }
+        if(i *i >a){
+            return true;
+        }
+        return iSprime(a, i + 1 );
+    }
+    public static void main(String[] args){
+        System.out.println("enter your number;");
+        int a = scanner.nextInt();
+        int i = 2;
+        boolean d = iSprime(a,i);
+        if(d == true){
+            System.out.println("prime");
+        }else{
+            System.out.println("Composite");
+        }
+
+
+
+
     }
 }
