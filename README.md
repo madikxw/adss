@@ -8,120 +8,116 @@ This repository contains my Java tasks and solutions.
 ```java
 
 import java.util.Scanner;
-//public class Main{
-//   public static  void separate(int n){
-//       if(n ==0){
-//            return;
-//        }
-//        separate(n/10);
-//        System.out.println(n%10);
-//    }
-//    public static void main(String[] args){
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Enter your number ");
-//        int a = scanner.nextInt();
-//        separate(a);
-//
-//    }
-//
-//}
+public class Main{
+   public static  void separate(int n){
+       if(n ==0){
+           return;
+        }
+        separate(n/10);
+        System.out.println(n%10);
+    }
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your number ");
+        int a = scanner.nextInt();
+        separate(a);
+
+    }
+
+}
 
 ## 🧠 Task 2
 ```java
 
-//public class Main{
-//     static Scanner scanner = new Scanner(System.in);
-//
-//    public static void  main(String[] args){
-//        System.out.println("enter amount elements: ");
-//        int b = scanner.nextInt();
-//        System.out.println("enter elements: ");
-//        int sum = average(b);
-//        System.out.println((double)sum/b);
-//
-//    }
-//    public static  int  average(int b) {
-//        if(b ==0){
-//            return 0;
-//        }
-//        int a = scanner.nextInt();
-//        return a + average(b-1);
-//}
-//    }
+public class Main{
+     static Scanner scanner = new Scanner(System.in);
+
+    public static void  main(String[] args){
+        System.out.println("enter amount elements: ");
+        int b = scanner.nextInt();
+        System.out.println("enter elements: ");
+        int sum = average(b);
+        System.out.println((double)sum/b);
+
+    }
+    public static  int  average(int b) {
+        if(b ==0){
+            return 0;
+        }
+        int a = scanner.nextInt();
+        return a + average(b-1);
+}
+    }
 
 
 ## 🧠 Task 3
 ```java
 
-//public class Main{
-//    static Scanner scanner = new Scanner(System.in);
-//    public static boolean iSprime(int a, int i  ){
-//        if(a % i == 0){
-//            return  false;
-//        }
-//        if(i *i >a){
-//            return true;
-//        }
-//        return iSprime(a, i + 1 );
-//    }
-//    public static void main(String[] args){
-//        System.out.println("enter your number;");
-//        int a = scanner.nextInt();
-//        int i = 2;
-//        boolean d = iSprime(a,i);
-//        if(d == true){
-//            System.out.println("prime");
-//        }else{
-//            System.out.println("Composite");
-//        }
-//
-//
-//
-//
-//    }
-//}
+public class Main{
+    static Scanner scanner = new Scanner(System.in);
+    public static boolean iSprime(int a, int i  ){
+        if(a % i == 0){
+            return  false;
+        }
+        if(i *i >a){
+            return true;
+        }
+        return iSprime(a, i + 1 );
+    }
+    public static void main(String[] args){
+        System.out.println("enter your number;");
+        int a = scanner.nextInt();
+        int i = 2;
+        boolean d = iSprime(a,i);
+        if(d == true){
+            System.out.println("prime");
+        }else{
+            System.out.println("Composite");
+        }
+
+    }
+}
 
 
 
 
 ## 🧠 Task 4
 ```java
-//public class Main{
-//    static  Scanner scanner = new Scanner(System.in);
-//    public static void main(String[] args){
-//        System.out.println("enter your number: ");
-//        int a = scanner.nextInt();
-//        System.out.println(fac(a));
-//
-//
-//    }
-//    public static int  fac(int a ){
-//        if(a==0){
-//            return 1 ;
-//        }
-//        return a * fac(a - 1);
-//
-//    }
-//
-//}
+public class Main{
+    static  Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args){
+        System.out.println("enter your number: ");
+        int a = scanner.nextInt();
+        System.out.println(fac(a));
+
+
+    }
+    public static int  fac(int a ){
+        if(a==0){
+            return 1 ;
+        }
+        return a * fac(a - 1);
+
+    }
+
+}
 
 ## 🧠 Task 5
 ```java
-//public class Main{
-//    static  Scanner scanner = new Scanner(System.in);
-//    public static void main(String[] args){
-//        System.out.println("Enter your number: ");
-//        int a = scanner.nextInt();
-//        System.out.println(fib(a));
-//    }
-//    public static  int fib(int a ){
-//        if(a <= 1){
-//            return a;
-//        }
-//        return fib(a - 1)+ fib(a - 2);
-//
-//
-//    }
+public class Main{
+    static  Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args){
+        System.out.println("Enter your number: ");
+        int a = scanner.nextInt();
+        System.out.println(fib(a));
+    }
+    public static  int fib(int a ){
+        if(a <= 1){
+            return a;
+        }
+        return fib(a - 1)+ fib(a - 2);
+
+    }
 
 
 ## 🧠 Task 6
