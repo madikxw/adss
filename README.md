@@ -5,6 +5,7 @@ This repository contains my Java tasks and solutions.
 ---
 
 ## 🧠 Task 1
+```java
 
 import java.util.Scanner;
 //public class Main{
@@ -26,6 +27,7 @@ import java.util.Scanner;
 //}
 
 ## 🧠 Task 2
+```java
 
 //public class Main{
 //     static Scanner scanner = new Scanner(System.in);
@@ -49,6 +51,7 @@ import java.util.Scanner;
 
 
 ## 🧠 Task 3
+```java
 
 //public class Main{
 //    static Scanner scanner = new Scanner(System.in);
@@ -82,7 +85,7 @@ import java.util.Scanner;
 
 
 ## 🧠 Task 4
-
+```java
 //public class Main{
 //    static  Scanner scanner = new Scanner(System.in);
 //    public static void main(String[] args){
@@ -103,7 +106,7 @@ import java.util.Scanner;
 //}
 
 ## 🧠 Task 5
-
+```java
 //public class Main{
 //    static  Scanner scanner = new Scanner(System.in);
 //    public static void main(String[] args){
@@ -123,7 +126,7 @@ import java.util.Scanner;
 
 ## 🧠 Task 6
 
-
+```java
 public class Main{
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args){
@@ -145,7 +148,7 @@ public class Main{
 }
 
 ## 🧠 Task 7
-
+```java
 public class Main{
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args){
@@ -168,7 +171,7 @@ public class Main{
 
 
 ## 🧠 Task 8
-
+```java
 public class Main{
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args){
@@ -194,7 +197,7 @@ public class Main{
 }
 
 ## 🧠 Task 9
-
+```java
 public class Main{
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args){
@@ -213,7 +216,7 @@ public class Main{
 
 
 ## 🧠 Task 10
-
+```java
 public class Main{
     static Scanner scanner   = new Scanner(System.in);
     public static void main(String[] args){
