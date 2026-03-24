@@ -1,21 +1,4 @@
-
-
-Name:Bissentayev Madiyar
-
-
-GROUP: IT-2501
-
-
-
-
-# 📘 Java Assignments
-
-This repository contains my Java tasks and solutions.
-
----
-
-## 🧠 Task 1
-```java
+TASK 1 
 
 import java.util.Scanner;
 public class Main{
@@ -35,7 +18,7 @@ public class Main{
     }
 
 }
-```
+---
 
 ## 🧠 Task 2
 ```java
