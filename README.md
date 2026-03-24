@@ -8,9 +8,10 @@
 
 This repository contains my **Assignment 1** for the algorithms  and data strcutures course(ADS).  
 
-
-
-
+--
+During this assighment i realized how important to have a enginering thinking, to split your sophicticated task to a smaller and easier one.
+I spent so many times to just eloborate how this challenge should be solved.Moreover, most of my time i spent to comprenend  the algorithms, i didnt even think how i must WRITE the code.My mindset was really filled of "how i should split and do this task". However if i continue strain my brain, i will definitely  reach of enginering thinking.
+ 
 ---
 
 ## 🧠 Task 1
@@ -35,6 +36,8 @@ public class Main{
 
 }
 ```
+
+in this task  i used simple recursive ,when the recursive take the last number and printed it out
 
 ## 🧠 Task 2
 ```java
