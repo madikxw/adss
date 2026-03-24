@@ -10,17 +10,6 @@ This repository contains my **Assignment 1** for the algorithms  and data strcut
 
 
 
-Name:Bissentayev Madiyar
-
-
-GROUP: IT-2501
-
-
-
-
-# 📘 Java Assignments
-
-This repository contains my Java tasks and solutions.
 
 ---
 
