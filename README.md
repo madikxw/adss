@@ -33,6 +33,7 @@ public class Main{
     }
 
 }
+```
 
 ## 🧠 Task 2
 ```java
@@ -56,7 +57,7 @@ public class Main{
         return a + average(b-1);
 }
     }
-
+```
 
 ## 🧠 Task 3
 ```java
@@ -85,7 +86,7 @@ public class Main{
 
     }
 }
-
+```
 
 
 
@@ -109,7 +110,7 @@ public class Main{
     }
 
 }
-
+```
 ## 🧠 Task 5
 ```java
 public class Main{
@@ -126,7 +127,7 @@ public class Main{
         return fib(a - 1)+ fib(a - 2);
 
     }
-
+```
 
 ## 🧠 Task 6
 
@@ -150,7 +151,7 @@ public class Main{
 
     }
 }
-
+```
 ## 🧠 Task 7
 ```java
 public class Main{
@@ -173,7 +174,7 @@ public class Main{
 
 }
 
-
+```
 ## 🧠 Task 8
 ```java
 public class Main{
@@ -199,7 +200,7 @@ public class Main{
         return isdigit(a , i + 1 );
     }
 }
-
+```
 ## 🧠 Task 9
 ```java
 public class Main{
@@ -217,7 +218,7 @@ public class Main{
         return 1 + count(a, i + 1 );
     }
 }
-
+```
 
 ## 🧠 Task 10
 ```java
@@ -237,7 +238,7 @@ public class Main{
         return gcd(b, a % b);
     }
 }
-
+```
 
 
 
