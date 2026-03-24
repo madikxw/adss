@@ -1,6 +1,8 @@
-# WELCOME TO MY REPOSITORY 
+
 
 Name:Bissentayev Madiyar
+
+
 GROUP: IT-2501
 
 
