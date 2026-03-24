@@ -18,10 +18,8 @@ public class Main{
     }
 
 }
----
 
-## 🧠 Task 2
-```java
+task 2 
 
 public class Main{
      static Scanner scanner = new Scanner(System.in);
@@ -42,10 +40,9 @@ public class Main{
         return a + average(b-1);
 }
     }
-```
 
-## 🧠 Task 3
-```java
+
+task 3
 
 public class Main{
     static Scanner scanner = new Scanner(System.in);
@@ -71,12 +68,12 @@ public class Main{
 
     }
 }
-```
 
 
 
-## 🧠 Task 4
-```java
+
+Task 4
+
 public class Main{
     static  Scanner scanner = new Scanner(System.in);
     public static void main(String[] args){
@@ -95,9 +92,9 @@ public class Main{
     }
 
 }
-```
-## 🧠 Task 5
-```java
+
+ Task 5
+
 public class Main{
     static  Scanner scanner = new Scanner(System.in);
     public static void main(String[] args){
@@ -112,11 +109,10 @@ public class Main{
         return fib(a - 1)+ fib(a - 2);
 
     }
-```
 
-## 🧠 Task 6
+Task 6
 
-```java
+
 public class Main{
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args){
@@ -136,9 +132,8 @@ public class Main{
 
     }
 }
-```
-## 🧠 Task 7
-```java
+ Task 7
+
 public class Main{
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args){
@@ -159,9 +154,7 @@ public class Main{
 
 }
 
-```
-## 🧠 Task 8
-```java
+task 8 
 public class Main{
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args){
@@ -185,9 +178,9 @@ public class Main{
         return isdigit(a , i + 1 );
     }
 }
-```
-## 🧠 Task 9
-```java
+
+Task 9
+
 public class Main{
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args){
@@ -203,10 +196,9 @@ public class Main{
         return 1 + count(a, i + 1 );
     }
 }
-```
 
-## 🧠 Task 10
-```java
+ Task 10
+
 public class Main{
     static Scanner scanner   = new Scanner(System.in);
     public static void main(String[] args){
@@ -223,7 +215,7 @@ public class Main{
         return gcd(b, a % b);
     }
 }
-```
+
 
 
 
