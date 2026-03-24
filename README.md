@@ -1,4 +1,4 @@
-# 📊 Database Design Assignment 1  
+# 📊 ADS Assignment 1  
 ### 🎓 Student: Bissenntayev Madiyar  
 ### 👥 Group: IT-2501  
 
