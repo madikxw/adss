@@ -232,7 +232,7 @@ public class Main{
     }
 }
 ```
-
+so the main idea is + 1 every time when you call recusion while
 
 ## 🧠 Task 10
 ```java
