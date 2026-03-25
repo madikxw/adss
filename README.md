@@ -62,6 +62,7 @@ public class Main{
 }
     }
 ```
+the second task was really hard to me .So  my task to find average number. the first thing first we need to understand how program will sumarize number one by one ,the main idea is every time we sumarize one elements  we need to decrease amonut of elements, therefore program will be stopped if b becomes 0 due to base case. and every time  this part of code " return a + average(b-1);" performs our varible "a" will take the next elements
 
 ## 🧠 Task 3
 ```java
@@ -91,7 +92,7 @@ public class Main{
     }
 }
 ```
-
+here i do some research in the youtube to find the formula hot to find prime number  "if(i *i >a)" so  the main principle -  is take number 2 (cause its the only even prime number) and start take a square .If  square of 2 is not greater than our prime number than it will increase by 1 . It will carry on until either  square of i will be greater than prime number or the division prime  into i will be without residue 
 
 
 ## 🧠 Task 4
@@ -113,6 +114,7 @@ public class Main{
 
     }
 
+
 }
 ```
 ## 🧠 Task 5
@@ -132,6 +134,7 @@ public class Main{
 
     }
 ```
+knowing formula fibonacci its enough to solve the problem. and about base case return variable a if a = 0 or a = 1;
 
 ## 🧠 Task 6
 
@@ -156,6 +159,7 @@ public class Main{
     }
 }
 ```
+in the task 6 i followed one rule. just multiple a itself until b ==0. in this case b play role like counter. so if we first time multiply a b -1;
 ## 🧠 Task 7
 ```java
 public class Main{
@@ -179,6 +183,8 @@ public class Main{
 }
 
 ```
+so the main idea is "Printing after recursion = reverse order or  Printing before recursion = normal order"
+
 ## 🧠 Task 8
 ```java
 public class Main{
@@ -205,6 +211,9 @@ public class Main{
     }
 }
 ```
+so i use a littl bit advanced function such as length and charART. SO  the main part " if(!Character.isDigit(a.charAt(i))){" is cheking every elements is not
+digit 
+
 ## 🧠 Task 9
 ```java
 public class Main{
@@ -223,6 +232,7 @@ public class Main{
     }
 }
 ```
+
 
 ## 🧠 Task 10
 ```java
