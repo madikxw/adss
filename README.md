@@ -1,244 +1,158 @@
-# 📘 Java Assignments
+# Assignment 2 – Banking System (Physical & Logical Data Structures)
 
-This repository contains my Java tasks and solutions.
+## Student Information
+- **Name:** B.Madiyar
+- **Group:** IT-2501
 
 ---
 
-## 🧠 Task 1
-```java
+## 📌 Project Overview
+This project simulates a **banking system** using both **logical** and **physical data structures** in Java.
 
-import java.util.Scanner;
-public class Main{
-   public static  void separate(int n){
-       if(n ==0){
-           return;
-        }
-        separate(n/10);
-        System.out.println(n%10);
-    }
-    public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your number ");
-        int a = scanner.nextInt();
-        separate(a);
+The goal is to demonstrate how different data structures work in real-life scenarios such as:
+- Managing bank accounts
+- Processing transactions
+- Handling queues (bill payments, account requests)
+- Tracking transaction history
 
-    }
+All tasks from the assignment are fully implemented and integrated into a working system.
 
-}
+---
 
-## 🧠 Task 2
-```java
+## ⚙️ Technologies Used
+- Java
+- IntelliJ IDEA
+- Data Structures:
+  - LinkedList
+  - Stack
+  - Queue
+  - Array
 
-public class Main{
-     static Scanner scanner = new Scanner(System.in);
+---
 
-    public static void  main(String[] args){
-        System.out.println("enter amount elements: ");
-        int b = scanner.nextInt();
-        System.out.println("enter elements: ");
-        int sum = average(b);
-        System.out.println((double)sum/b);
+## 🧠 Implemented Tasks
 
-    }
-    public static  int  average(int b) {
-        if(b ==0){
-            return 0;
-        }
-        int a = scanner.nextInt();
-        return a + average(b-1);
-}
-    }
+### ✅ Task 1 – Bank Account Storage (LinkedList)
+- Stores accounts using `LinkedList`
+- Features:
+  - Add account
+  - Display accounts
+  - Search by username
 
+### ✅ Task 2 – Deposit & Withdraw
+- Allows:
+  - Deposit money
+  - Withdraw money
+  - Updates balance in LinkedList
 
-## 🧠 Task 3
-```java
+### ✅ Task 3 – Transaction History (Stack)
+- Uses `Stack` (LIFO)
+- Features:
+  - Add transaction
+  - View last transaction (peek)
+  - Undo last transaction (pop)
 
-public class Main{
-    static Scanner scanner = new Scanner(System.in);
-    public static boolean iSprime(int a, int i  ){
-        if(a % i == 0){
-            return  false;
-        }
-        if(i *i >a){
-            return true;
-        }
-        return iSprime(a, i + 1 );
-    }
-    public static void main(String[] args){
-        System.out.println("enter your number;");
-        int a = scanner.nextInt();
-        int i = 2;
-        boolean d = iSprime(a,i);
-        if(d == true){
-            System.out.println("prime");
-        }else{
-            System.out.println("Composite");
-        }
+### ✅ Task 4 – Bill Payment Queue (Queue)
+- Uses `Queue` (FIFO)
+- Features:
+  - Add bill
+  - Process bill
+  - Display queue
 
-    }
-}
+### ✅ Task 5 – Account Opening Queue
+- Uses `Queue`
+- Simulates admin workflow:
+  - Users submit requests
+  - Admin processes requests
+  - Approved accounts move to LinkedList
 
+### ✅ Task 6 – Physical Data Structure (Array)
+- Uses `BankAccount[3]`
+- Stores and prints predefined accounts
 
+---
 
+## 🏦 Mini Banking System (Integration)
 
-## 🧠 Task 4
-```java
-public class Main{
-    static  Scanner scanner = new Scanner(System.in);
-    public static void main(String[] args){
-        System.out.println("enter your number: ");
-        int a = scanner.nextInt();
-        System.out.println(fac(a));
+### Main Menu
+```
+1 – Enter Bank
+2 – Enter ATM
+3 – Admin Area
+4 – Exit
+```
 
+### Bank Menu
+- Add account
+- Deposit / Withdraw
+- Submit account request
+- Manage bill payments
+- View transactions
 
-    }
-    public static int  fac(int a ){
-        if(a==0){
-            return 1 ;
-        }
-        return a * fac(a - 1);
+### ATM Menu
+- Check balance
+- Withdraw money
 
-    }
+### Admin Menu
+- Process account requests
+- Process bill payments
+- View all accounts
 
-}
+---
 
-## 🧠 Task 5
-```java
-public class Main{
-    static  Scanner scanner = new Scanner(System.in);
-    public static void main(String[] args){
-        System.out.println("Enter your number: ");
-        int a = scanner.nextInt();
-        System.out.println(fib(a));
-    }
-    public static  int fib(int a ){
-        if(a <= 1){
-            return a;
-        }
-        return fib(a - 1)+ fib(a - 2);
+## 💡 Why These Data Structures?
 
-    }
+| Structure | Purpose |
+|----------|--------|
+| LinkedList | Dynamic storage of accounts |
+| Stack | Transaction history (LIFO – last action first) |
+| Queue | Bill payments & requests (FIFO – first come first serve) |
+| Array | Fixed-size storage (physical memory example) |
 
+---
 
-## 🧠 Task 6
+## 🚀 How to Run
+1. Open project in IntelliJ IDEA
+2. Run `Main.java`
+3. Use console menu to interact with system
 
-```java
-public class Main{
-    static Scanner scanner = new Scanner(System.in);
-    public static void main(String[] args){
-        System.out.println("enter your first number: ");
-        int a = scanner.nextInt();
-        scanner.nextLine();
-        System.out.println("enter your second number:");
-        int b = scanner.nextInt();
-        System.out.println(deg(a,b));
+---
 
-    }
-    public static int deg(int a ,int b){
-        if(b ==0){
-            return 1;
-        }
-        return a * deg(a,b-1);
+## ⚠️ Notes
+- Program handles invalid input safely
+- Prevents duplicate usernames
+- Ensures correct balance operations
 
-    }
-}
+---
 
-## 🧠 Task 7
-```java
-public class Main{
-    static Scanner scanner = new Scanner(System.in);
-    public static void main(String[] args){
-        System.out.println("enter your number:" +
-                "");
-        int a = scanner.nextInt();
-        reverse(a);
+## 📸 Screenshots
+(Add screenshots here for each task when submitting)
 
-    }
-    public static void reverse(int a ){
-        if(a ==0){
-            return;
-        }
-        int x = scanner.nextInt();
-        reverse(a - 1);
-        System.out.println(a + " ");
-    }
+---
 
-}
+## 🧾 Summary
+During this project:
+- Learned difference between **logical vs physical structures**
+- Implemented real banking simulation
+- Improved problem-solving and Java skills
+- Understood how memory and structure affect program behavior
 
+---
 
-## 🧠 Task 8
-```java
-public class Main{
-    static Scanner scanner = new Scanner(System.in);
-    public static void main(String[] args){
-        System.out.println("enter your message: ");
-        String a = scanner.nextLine();
+## ✅ Example Output
+```
+Account added successfully
+Accounts List:
+1. Ali – Balance: 150000
+2. Sara – Balance: 220000
 
-       if (isdigit(a, 0) == true){
-           System.out.println("yes");
-       }else{
-           System.out.println("no");
-       }
+Deposit 50000 to Ali
+New balance: 200000
 
-    }
-    public static boolean isdigit(String a , int i ){
-        if(i == a.length()){
-            return true;
-        }
-        if(!Character.isDigit(a.charAt(i))){
-            return false;
-        }
-        return isdigit(a , i + 1 );
-    }
-}
+Last transaction: Withdraw 20000 from Ali
+Undo → Withdraw removed
+```
 
-## 🧠 Task 9
-```java
-public class Main{
-    static Scanner scanner = new Scanner(System.in);
-    public static void main(String[] args){
-        System.out.println("enter your message: ");
-        String a = scanner.nextLine();
-        System.out.println(count(a,0));
+---
 
-    }
-    public static  int count(String a ,int i ){
-        if(i == a.length()){
-            return 0;
-        }
-        return 1 + count(a, i + 1 );
-    }
-}
-
-
-## 🧠 Task 10
-```java
-public class Main{
-    static Scanner scanner   = new Scanner(System.in);
-    public static void main(String[] args){
-        System.out.println("enter your first number: ");
-        int a = scanner.nextInt();
-        System.out.println("enter your second number: ");
-        int b  = scanner.nextInt();
-        System.out.println(gcd(a,b));
-    }
-    public static int gcd(int a ,int b ){
-        if(b ==0){
-            return a;
-        }
-        return gcd(b, a % b);
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+✔ Project fully meets all assignment criteria 
