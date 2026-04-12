@@ -1,8 +1,8 @@
 # Assignment 2 – Banking System (Physical & Logical Data Structures)
 
 ## Student Information
-- **Name:** [Your Name]
-- **Group:** [Your Group]
+- **Name:** B.Madiyar
+- **Group:** IT-2501
 
 ---
 
@@ -155,4 +155,4 @@ Undo → Withdraw removed
 
 ---
 
-✔ Project fully meets all assignment criteria fileciteturn0file0
+✔ Project fully meets all assignment criteria 
