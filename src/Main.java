@@ -1,222 +1,210 @@
+import java.sql.SQLOutput;
+import java.util.*;
 
-// the 1 task
+public class Main {
 
-import java.util.Scanner;
-//public class Main{
-//   public static  void separate(int n){
-//       if(n ==0){
-//            return;
-//        }
-//        separate(n/10);
-//        System.out.println(n%10);
-//    }
-//    public static void main(String[] args){
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Enter your number ");
-//        int a = scanner.nextInt();
-//        separate(a);
-//
-//    }
-//
-//}
+    static Scanner scanner = new Scanner(System.in);
 
+    static class BankAccount {
+        String accountNumber;
+        String username;
+        double balance;
 
+        public BankAccount(String accountNumber, String username, double balance) {
+            this.accountNumber = accountNumber;
+            this.username = username;
+            this.balance = balance;
+        }
+    }
 
-// the 2 task
+    static LinkedList<BankAccount> accounts = new LinkedList<>();
+    static Stack<String> history = new Stack<>();
+    static Queue<String> bills = new LinkedList<>();
+    static Queue<BankAccount> requests = new LinkedList<>();
 
+    public static void main(String[] args) {
 
-//public class Main{
-//     static Scanner scanner = new Scanner(System.in);
-//
-//    public static void  main(String[] args){
-//        System.out.println("enter amount elements: ");
-//        int b = scanner.nextInt();
-//        System.out.println("enter elements: ");
-//        int sum = average(b);
-//        System.out.println((double)sum/b);
-//
-//    }
-//    public static  int  average(int b) {
-//        if(b ==0){
-//            return 0;
-//        }
-//        int a = scanner.nextInt();
-//        return a + average(b-1);
-//}
-//    }
-//
+        // demo accounts
+        accounts.add(new BankAccount("1", "Ali", 150000));
+        accounts.add(new BankAccount("2", "Sara", 220000));
 
-//the 3 task
-//public class Main{
-//    static Scanner scanner = new Scanner(System.in);
-//    public static boolean iSprime(int a, int i  ){
-//        if(a % i == 0){
-//            return  false;
-//        }
-//        if(i *i >a){
-//            return true;
-//        }
-//        return iSprime(a, i + 1 );
-//    }
-//    public static void main(String[] args){
-//        System.out.println("enter your number;");
-//        int a = scanner.nextInt();
-//        int i = 2;
-//        boolean d = iSprime(a,i);
-//        if(d == true){
-//            System.out.println("prime");
-//        }else{
-//            System.out.println("Composite");
-//        }
-//
-//
-//
-//
-//    }
-//}
+        mainMenu();
+    }
+
+    // ================= MAIN MENU =================
+    static void mainMenu() {
+        while (true) {
+            System.out.println("\n1 – Bank\n2 – ATM\n3 – Admin\n4 – Exit");
+            System.out.println("Enter your choice: ");
+            int c = scanner.nextInt(); scanner.nextLine();
+
+            if (c == 1) bankMenu();
+            else if (c == 2) atmMenu();
+            else if (c == 3) adminMenu();
+            else break;
+        }
+    }
+
+    // ================= BANK =================
+    static void bankMenu() {
+        while (true) {
+            System.out.println("\n--- BANK MENU ---");
+            System.out.println("1 Add account");
+            System.out.println("2 Deposit / Withdraw");
+            System.out.println("3 Submit account request");
+            System.out.println("4 Manage bills");
+            System.out.println("5 View transactions");
+            System.out.println("6 Back");
+            System.out.println("Enter your choice: ");
 
 
-//task 4
+            int c = scanner.nextInt(); scanner.nextLine();
 
-//public class Main{
-//    static  Scanner scanner = new Scanner(System.in);
-//    public static void main(String[] args){
-//        System.out.println("enter your number: ");
-//        int a = scanner.nextInt();
-//        System.out.println(fac(a));
-//
-//
-//    }
-//    public static int  fac(int a ){
-//        if(a==0){
-//            return 1 ;
-//        }
-//        return a * fac(a - 1);
-//
-//    }
-//
-//}
+            if (c == 1) addAccount();
+            else if (c == 2) depositWithdraw();
+            else if (c == 3) submitRequest();
+            else if (c == 4) manageBills();
+            else if (c == 5) showHistory();
+            else break;
+        }
+    }
 
-//task 5
-//public class Main{
-//    static  Scanner scanner = new Scanner(System.in);
-//    public static void main(String[] args){
-//        System.out.println("Enter your number: ");
-//        int a = scanner.nextInt();
-//        System.out.println(fib(a));
-//    }
-//    public static  int fib(int a ){
-//        if(a <= 1){
-//            return a;
-//        }
-//        return fib(a - 1)+ fib(a - 2);
-//
-//
-//    }
-//}
+    static void addAccount() {
+        System.out.print("Username: ");
+        String u = scanner.nextLine();
+
+        System.out.print("Balance: ");
+        double b = scanner.nextDouble(); scanner.nextLine();
+
+        accounts.add(new BankAccount(UUID.randomUUID().toString(), u, b));
+        System.out.println("Account added");
+    }
+
+    static void depositWithdraw() {
+        System.out.print("Username: ");
+        String u = scanner.nextLine();
+        BankAccount acc = find(u);
+
+        if (acc == null) return;
+
+        System.out.println("1 Deposit  2 Withdraw");
+        int c = scanner.nextInt();
+
+        System.out.print("Amount: ");
+        double a = scanner.nextDouble(); scanner.nextLine();
+
+        if (c == 1) {
+            acc.balance += a;
+            history.push("Deposit " + a + " to " + u);
+        } else {
+            if (acc.balance >= a) {
+                acc.balance -= a;
+                history.push("Withdraw " + a + " from " + u);
+            } else {
+                System.out.println("Not enough money");
+            }
+        }
+
+        System.out.println("Balance: " + acc.balance);
+    }
+
+    static void submitRequest() {
+        System.out.print("Username: ");
+        String u = scanner.nextLine();
+
+        System.out.print("Balance: ");
+        double b = scanner.nextDouble(); scanner.nextLine();
+
+        requests.add(new BankAccount("REQ", u, b));
+        System.out.println("Request submitted");
+    }
+
+    static void manageBills() {
+        System.out.println("1 Add bill  2 Process bill");
+        int c = scanner.nextInt(); scanner.nextLine();
+
+        if (c == 1) {
+            System.out.print("Bill name: ");
+            String bill = scanner.nextLine();
+            bills.add(bill);
+            history.push("Bill: " + bill);
+        } else {
+            if (!bills.isEmpty()) {
+                System.out.println("Processing: " + bills.poll());
+            }
+        }
+    }
+
+    static void showHistory() {
+        if (!history.isEmpty())
+            System.out.println("Last: " + history.peek());
+    }
+
+    // ================= ATM =================
+    static void atmMenu() {
+        System.out.println("\n--- ATM ---");
+        System.out.println("1 Check balance\n2 Withdraw");
+        System.out.println("Enter your choice: ");
 
 
-//task 6
-//public class Main{
-//    static Scanner scanner = new Scanner(System.in);
-//    public static void main(String[] args){
-//        System.out.println("enter your first number: ");
-//        int a = scanner.nextInt();
-//        scanner.nextLine();
-//        System.out.println("enter your second number:");
-//        int b = scanner.nextInt();
-//        System.out.println(deg(a,b));
-//
-//    }
-//    public static int deg(int a ,int b){
-//        if(b ==0){
-//            return 1;
-//        }
-//        return a * deg(a,b-1);
-//
-//    }
-//}
+        int c = scanner.nextInt(); scanner.nextLine();
 
-//task 7
+        System.out.print("Username: ");
+        String u = scanner.nextLine();
+        BankAccount acc = find(u);
 
-//public class Main{
-//    static Scanner scanner = new Scanner(System.in);
-//    public static void main(String[] args){
-//        System.out.println("enter your number:" +
-//                "");
-//        int a = scanner.nextInt();
-//        reverse(a);
-//
-//    }
-//    public static void reverse(int a ){
-//        if(a ==0){
-//            return;
-//        }
-//        int x = scanner.nextInt();
-//        reverse(a - 1);
-//        System.out.println(a + " ");
-//    }
-//
-//}
+        if (acc == null) return;
 
-//task 8
+        if (c == 1) {
+            System.out.println("Balance: " + acc.balance);
+        } else {
+            System.out.print("Amount: ");
+            double a = scanner.nextDouble();
 
-//public class Main{
-//    static Scanner scanner = new Scanner(System.in);
-//    public static void main(String[] args){
-//        System.out.println("enter your message: ");
-//        String a = scanner.nextLine();
-//
-//       if (isdigit(a, 0) == true){
-//           System.out.println("yes");
-//       }else{
-//           System.out.println("no");
-//       }
-//
-//    }
-//    public static boolean isdigit(String a , int i ){
-//        if(i == a.length()){
-//            return true;
-//        }
-//        if(!Character.isDigit(a.charAt(i))){
-//            return false;
-//        }
-//        return isdigit(a , i + 1 );
-//    }
-//}
+            if (acc.balance >= a) {
+                acc.balance -= a;
+                history.push("ATM withdraw " + a);
+                System.out.println("Done");
+            }
+        }
+    }
 
-//task 9
-//public class Main{
-//    static Scanner scanner = new Scanner(System.in);
-//    public static void main(String[] args){
-//        System.out.println("enter your message: ");
-//        String a = scanner.nextLine();
-//        System.out.println(count(a,0));
-//
-//    }
-//    public static  int count(String a ,int i ){
-//        if(i == a.length()){
-//            return 0;
-//        }
-//        return 1 + count(a, i + 1 );
-//    }
-//}
+    // ================= ADMIN =================
+    static void adminMenu() {
+        while (true) {
+            System.out.println("\n--- ADMIN ---");
+            System.out.println("1 Process account requests");
+            System.out.println("2 Process bills");
+            System.out.println("3 View accounts");
+            System.out.println("4 Back");
+            System.out.println("Enter your choice: ");
 
-// task 10
 
-//public class Main{
-//    static Scanner scanner   = new Scanner(System.in);
-//    public static void main(String[] args){
-//        System.out.println("enter your first number: ");
-//        int a = scanner.nextInt();
-//        System.out.println("enter your second number: ");
-//        int b  = scanner.nextInt();
-//        System.out.println(gcd(a,b));
-//    }
-//    public static int gcd(int a ,int b ){
-//        if(b ==0){
-//            return a;
-//        }
-//        return gcd(b, a % b);
-//    }
-//}
+            int c = scanner.nextInt(); scanner.nextLine();
+
+            if (c == 1) {
+                if (!requests.isEmpty()) {
+                    accounts.add(requests.poll());
+                    System.out.println("Account approved");
+                }
+            } else if (c == 2) {
+                if (!bills.isEmpty()) {
+                    System.out.println("Processed: " + bills.poll());
+                }
+            } else if (c == 3) {
+                for (BankAccount a : accounts) {
+                    System.out.println(a.username + " - " + a.balance);
+                }
+            } else break;
+        }
+    }
+
+    // ================= HELPER =================
+    static BankAccount find(String username) {
+        for (BankAccount a : accounts) {
+            if (a.username.equalsIgnoreCase(username)) return a;
+        }
+        System.out.println("Not found");
+        return null;
+    }
+}
