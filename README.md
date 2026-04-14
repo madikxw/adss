@@ -1,158 +1,77 @@
-# Assignment 2 – Banking System (Physical & Logical Data Structures)
+# Assignment 2 – Banking System
 
-## Student Information
-- **Name:** B.Madiyar
-- **Group:** IT-2501
+**Student:** B.Madiyar 
+**Group:** IT-2501
 
----
+## Description
 
-## 📌 Project Overview
-This project simulates a **banking system** using both **logical** and **physical data structures** in Java.
+This project is a simple banking system written in Java.  
+The goal is to show how different data structures work in practice.
 
-The goal is to demonstrate how different data structures work in real-life scenarios such as:
-- Managing bank accounts
-- Processing transactions
-- Handling queues (bill payments, account requests)
-- Tracking transaction history
-
-All tasks from the assignment are fully implemented and integrated into a working system.
-
----
-
-## ⚙️ Technologies Used
-- Java
-- IntelliJ IDEA
-- Data Structures:
-  - LinkedList
-  - Stack
-  - Queue
-  - Array
+The program includes:
+- Bank account storage using LinkedList
+- Deposit and withdraw operations
+- Transaction history using Stack
+- Bill payment and account requests using Queue
+- Fixed-size array of accounts
+- Bank, ATM, and Admin menus
 
 ---
 
-## 🧠 Implemented Tasks
+## Data Structures Used
 
-### ✅ Task 1 – Bank Account Storage (LinkedList)
-- Stores accounts using `LinkedList`
-- Features:
-  - Add account
-  - Display accounts
-  - Search by username
+**LinkedList**
+- Stores all bank accounts
+- Allows adding, searching, and updating accounts
 
-### ✅ Task 2 – Deposit & Withdraw
-- Allows:
-  - Deposit money
-  - Withdraw money
-  - Updates balance in LinkedList
+**Stack**
+- Stores transaction history
+- Works with LIFO (last action on top)
 
-### ✅ Task 3 – Transaction History (Stack)
-- Uses `Stack` (LIFO)
-- Features:
-  - Add transaction
-  - View last transaction (peek)
-  - Undo last transaction (pop)
+**Queue**
+- Used for bill payments and account requests
+- Works with FIFO (first request processed first)
 
-### ✅ Task 4 – Bill Payment Queue (Queue)
-- Uses `Queue` (FIFO)
-- Features:
-  - Add bill
-  - Process bill
-  - Display queue
-
-### ✅ Task 5 – Account Opening Queue
-- Uses `Queue`
-- Simulates admin workflow:
-  - Users submit requests
-  - Admin processes requests
-  - Approved accounts move to LinkedList
-
-### ✅ Task 6 – Physical Data Structure (Array)
-- Uses `BankAccount[3]`
-- Stores and prints predefined accounts
+**Array**
+- Stores 3 predefined accounts
+- Demonstrates fixed-size structure
 
 ---
 
-## 🏦 Mini Banking System (Integration)
-
-### Main Menu
-```
-1 – Enter Bank
-2 – Enter ATM
-3 – Admin Area
-4 – Exit
-```
+## Program Features
 
 ### Bank Menu
 - Add account
-- Deposit / Withdraw
-- Submit account request
-- Manage bill payments
-- View transactions
+- Display all accounts
+- Search account
+- Deposit money
+- Withdraw money
+- Add bill payment
 
 ### ATM Menu
 - Check balance
 - Withdraw money
 
 ### Admin Menu
+- View account requests
 - Process account requests
-- Process bill payments
+- View bill queue
+- Process bills
 - View all accounts
 
 ---
 
-## 💡 Why These Data Structures?
+## Structure
 
-| Structure | Purpose |
-|----------|--------|
-| LinkedList | Dynamic storage of accounts |
-| Stack | Transaction history (LIFO – last action first) |
-| Queue | Bill payments & requests (FIFO – first come first serve) |
-| Array | Fixed-size storage (physical memory example) |
+- `Main.java` – starts the program  
+- `BankAccount.java` – account model  
+- `BankSystem.java` – main logic and menus  
 
 ---
 
-## 🚀 How to Run
-1. Open project in IntelliJ IDEA
-2. Run `Main.java`
-3. Use console menu to interact with system
+## Summary
 
----
+In this project, I implemented a banking system using LinkedList, Stack, Queue, and Array.  
+I learned how different data structures can be used for different tasks like storing accounts, processing requests, and managing history.
 
-## ⚠️ Notes
-- Program handles invalid input safely
-- Prevents duplicate usernames
-- Ensures correct balance operations
-
----
-
-## 📸 Screenshots
-(Add screenshots here for each task when submitting)
-
----
-
-## 🧾 Summary
-During this project:
-- Learned difference between **logical vs physical structures**
-- Implemented real banking simulation
-- Improved problem-solving and Java skills
-- Understood how memory and structure affect program behavior
-
----
-
-## ✅ Example Output
-```
-Account added successfully
-Accounts List:
-1. Ali – Balance: 150000
-2. Sara – Balance: 220000
-
-Deposit 50000 to Ali
-New balance: 200000
-
-Last transaction: Withdraw 20000 from Ali
-Undo → Withdraw removed
-```
-
----
-
-✔ Project fully meets all assignment criteria 
+The program combines all tasks into one system with Bank, ATM, and Admin menus.
