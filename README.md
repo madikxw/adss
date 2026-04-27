@@ -1,158 +1,81 @@
-# Assignment 2 – Banking System (Physical & Logical Data Structures)
+# Assignment 3: Sorting and Searching Algorithm Analysis System
 
-## Student Information
-- **Name:** B.Madiyar
-- **Group:** IT-2501
+## Project Overview
 
----
+This project implements and compares three fundamental algorithms:
 
-## 📌 Project Overview
-This project simulates a **banking system** using both **logical** and **physical data structures** in Java.
+- Selection Sort as the basic sorting algorithm
+- Quick Sort as the advanced sorting algorithm
+- Binary Search as the searching algorithm
 
-The goal is to demonstrate how different data structures work in real-life scenarios such as:
-- Managing bank accounts
-- Processing transactions
-- Handling queues (bill payments, account requests)
-- Tracking transaction history
-
-All tasks from the assignment are fully implemented and integrated into a working system.
+The goal of the project is to measure and compare algorithm performance using different input sizes and to understand how theoretical Big-O complexity matches practical execution time.
 
 ---
 
-## ⚙️ Technologies Used
-- Java
-- IntelliJ IDEA
-- Data Structures:
-  - LinkedList
-  - Stack
-  - Queue
-  - Array
+## Selected Algorithms
+
+### 1. Selection Sort
+
+Selection Sort repeatedly finds the smallest element in the unsorted part of the array and places it at the beginning.
+
+In this project, Selection Sort is implemented recursively.
+
+**Time Complexity:**
+
+| Case | Complexity |
+|---|---|
+| Best Case | O(n²) |
+| Average Case | O(n²) |
+| Worst Case | O(n²) |
+
+Selection Sort is simple but slow for large arrays because it always compares many elements.
 
 ---
 
-## 🧠 Implemented Tasks
+### 2. Quick Sort
 
-### ✅ Task 1 – Bank Account Storage (LinkedList)
-- Stores accounts using `LinkedList`
-- Features:
-  - Add account
-  - Display accounts
-  - Search by username
+Quick Sort is a divide-and-conquer sorting algorithm. It selects a pivot, partitions the array into smaller and larger elements, and then recursively sorts both parts.
 
-### ✅ Task 2 – Deposit & Withdraw
-- Allows:
-  - Deposit money
-  - Withdraw money
-  - Updates balance in LinkedList
+**Time Complexity:**
 
-### ✅ Task 3 – Transaction History (Stack)
-- Uses `Stack` (LIFO)
-- Features:
-  - Add transaction
-  - View last transaction (peek)
-  - Undo last transaction (pop)
+| Case | Complexity |
+|---|---|
+| Best Case | O(n log n) |
+| Average Case | O(n log n) |
+| Worst Case | O(n²) |
 
-### ✅ Task 4 – Bill Payment Queue (Queue)
-- Uses `Queue` (FIFO)
-- Features:
-  - Add bill
-  - Process bill
-  - Display queue
-
-### ✅ Task 5 – Account Opening Queue
-- Uses `Queue`
-- Simulates admin workflow:
-  - Users submit requests
-  - Admin processes requests
-  - Approved accounts move to LinkedList
-
-### ✅ Task 6 – Physical Data Structure (Array)
-- Uses `BankAccount[3]`
-- Stores and prints predefined accounts
+Quick Sort is usually much faster than Selection Sort, especially for larger arrays.
 
 ---
 
-## 🏦 Mini Banking System (Integration)
+### 3. Binary Search
 
-### Main Menu
-```
-1 – Enter Bank
-2 – Enter ATM
-3 – Admin Area
-4 – Exit
-```
+Binary Search finds a target value by repeatedly dividing the sorted array in half.
 
-### Bank Menu
-- Add account
-- Deposit / Withdraw
-- Submit account request
-- Manage bill payments
-- View transactions
+In this project, Binary Search is implemented recursively.
 
-### ATM Menu
-- Check balance
-- Withdraw money
+**Time Complexity:**
 
-### Admin Menu
-- Process account requests
-- Process bill payments
-- View all accounts
+| Case | Complexity |
+|---|---|
+| Best Case | O(1) |
+| Average Case | O(log n) |
+| Worst Case | O(log n) |
+
+Binary Search requires a sorted array because it decides which half of the array to search based on ordered values.
 
 ---
 
-## 💡 Why These Data Structures?
+## Project Structure
 
-| Structure | Purpose |
-|----------|--------|
-| LinkedList | Dynamic storage of accounts |
-| Stack | Transaction history (LIFO – last action first) |
-| Queue | Bill payments & requests (FIFO – first come first serve) |
-| Array | Fixed-size storage (physical memory example) |
-
----
-
-## 🚀 How to Run
-1. Open project in IntelliJ IDEA
-2. Run `Main.java`
-3. Use console menu to interact with system
-
----
-
-## ⚠️ Notes
-- Program handles invalid input safely
-- Prevents duplicate usernames
-- Ensures correct balance operations
-
----
-
-## 📸 Screenshots
-(Add screenshots here for each task when submitting)
-
----
-
-## 🧾 Summary
-During this project:
-- Learned difference between **logical vs physical structures**
-- Implemented real banking simulation
-- Improved problem-solving and Java skills
-- Understood how memory and structure affect program behavior
-
----
-
-## ✅ Example Output
-```
-Account added successfully
-Accounts List:
-1. Ali – Balance: 150000
-2. Sara – Balance: 220000
-
-Deposit 50000 to Ali
-New balance: 200000
-
-Last transaction: Withdraw 20000 from Ali
-Undo → Withdraw removed
-```
-
----
-
-✔ Project fully meets all assignment criteria 
+```text
+assignment3-sorting-searching/
+├── src/
+│   ├── Sorter.java
+│   ├── Searcher.java
+│   ├── Experiment.java
+│   └── Main.java
+├── docs/
+│   └── screenshots/
+├── README.md
+└── .gitignore
