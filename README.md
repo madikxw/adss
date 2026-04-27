@@ -1,77 +1,81 @@
-# Assignment 2 – Banking System
+# Assignment 3: Sorting and Searching Algorithm Analysis System
 
-**Student:** B.Madiyar 
-**Group:** IT-2501
+## Project Overview
 
-## Description
+This project implements and compares three fundamental algorithms:
 
-This project is a simple banking system written in Java.  
-The goal is to show how different data structures work in practice.
+- Selection Sort as the basic sorting algorithm
+- Quick Sort as the advanced sorting algorithm
+- Binary Search as the searching algorithm
 
-The program includes:
-- Bank account storage using LinkedList
-- Deposit and withdraw operations
-- Transaction history using Stack
-- Bill payment and account requests using Queue
-- Fixed-size array of accounts
-- Bank, ATM, and Admin menus
+The goal of the project is to measure and compare algorithm performance using different input sizes and to understand how theoretical Big-O complexity matches practical execution time.
 
 ---
 
-## Data Structures Used
+## Selected Algorithms
 
-**LinkedList**
-- Stores all bank accounts
-- Allows adding, searching, and updating accounts
+### 1. Selection Sort
 
-**Stack**
-- Stores transaction history
-- Works with LIFO (last action on top)
+Selection Sort repeatedly finds the smallest element in the unsorted part of the array and places it at the beginning.
 
-**Queue**
-- Used for bill payments and account requests
-- Works with FIFO (first request processed first)
+In this project, Selection Sort is implemented recursively.
 
-**Array**
-- Stores 3 predefined accounts
-- Demonstrates fixed-size structure
+**Time Complexity:**
 
----
+| Case | Complexity |
+|---|---|
+| Best Case | O(n²) |
+| Average Case | O(n²) |
+| Worst Case | O(n²) |
 
-## Program Features
-
-### Bank Menu
-- Add account
-- Display all accounts
-- Search account
-- Deposit money
-- Withdraw money
-- Add bill payment
-
-### ATM Menu
-- Check balance
-- Withdraw money
-
-### Admin Menu
-- View account requests
-- Process account requests
-- View bill queue
-- Process bills
-- View all accounts
+Selection Sort is simple but slow for large arrays because it always compares many elements.
 
 ---
 
-## Structure
+### 2. Quick Sort
 
-- `Main.java` – starts the program  
-- `BankAccount.java` – account model  
-- `BankSystem.java` – main logic and menus  
+Quick Sort is a divide-and-conquer sorting algorithm. It selects a pivot, partitions the array into smaller and larger elements, and then recursively sorts both parts.
+
+**Time Complexity:**
+
+| Case | Complexity |
+|---|---|
+| Best Case | O(n log n) |
+| Average Case | O(n log n) |
+| Worst Case | O(n²) |
+
+Quick Sort is usually much faster than Selection Sort, especially for larger arrays.
 
 ---
 
-## Summary
+### 3. Binary Search
 
-In this project, I implemented a banking system using LinkedList, Stack, Queue, and Array.  
-I learned how different data structures can be used for different tasks like storing accounts, processing requests, and managing history.
+Binary Search finds a target value by repeatedly dividing the sorted array in half.
 
-The program combines all tasks into one system with Bank, ATM, and Admin menus.
+In this project, Binary Search is implemented recursively.
+
+**Time Complexity:**
+
+| Case | Complexity |
+|---|---|
+| Best Case | O(1) |
+| Average Case | O(log n) |
+| Worst Case | O(log n) |
+
+Binary Search requires a sorted array because it decides which half of the array to search based on ordered values.
+
+---
+
+## Project Structure
+
+```text
+assignment3-sorting-searching/
+├── src/
+│   ├── Sorter.java
+│   ├── Searcher.java
+│   ├── Experiment.java
+│   └── Main.java
+├── docs/
+│   └── screenshots/
+├── README.md
+└── .gitignore
