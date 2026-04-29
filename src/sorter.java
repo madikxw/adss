@@ -16,7 +16,7 @@ class Sorter {
             }
         }
 
-        // swap
+//swap
         int temp = arr[start];
         arr[start] = arr[minIndex];
         arr[minIndex] = temp;

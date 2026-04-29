@@ -33,7 +33,7 @@ class Experiment {
         for (int size : sizes) {
             int[] arr = sorter.generateRandomArray(size);
 
-            sorter.advancedSort(arr); // обязательно для binary search
+            sorter.advancedSort(arr);
 
             long t1 = measureSortTime(arr, "basic", sorter);
             long t2 = measureSortTime(arr, "advanced", sorter);
